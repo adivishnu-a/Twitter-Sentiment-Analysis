@@ -4,14 +4,15 @@
 This project aims to analyze Twitter sentiment data using Apache Spark for data processing and R for visualization. The goal is to understand public sentiment on various entities by analyzing tweets and generating insightful visualizations.
 
 ## Table of Contents
-- Abstract
-- Project Structure
-- Environment Setup
-- Running the Project
-- File Descriptions
-- Output Descriptions
-- Purpose
-- License
+- [Abstract](#abstract)
+- [Project Structure](#project-structure)
+- [Environment Setup](#environment-setup)
+- [Running the Project](#running-the-project)
+- [File Descriptions](#file-descriptions)
+- [Output Descriptions](#output-descriptions)
+- [Purpose](#purpose)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Project Structure
 ```
@@ -61,11 +62,7 @@ cd Twitter-Sentiment-Analysis
 ### Step 1: Run the Java Code
 1. Open IntelliJ IDEA.
 2. Open the cloned repository as a Maven project.
-3. Run the `TwitterSentimentAnalysis` class located in 
-
-TwitterSentimentAnalysis.java
-
-.
+3. Run the `TwitterSentimentAnalysis` class located in **TwitterSentimentAnalysis.java**
 
 ### Step 2: Run the R Script
 ```sh
@@ -74,9 +71,7 @@ Rscript R/visualization.R
 
 ## File Descriptions
 
-### 
-
-tweets.csv
+### tweets.csv
 
 
 - **Description:** Contains the tweet data without headers.
@@ -86,9 +81,7 @@ tweets.csv
   - `Sentiment`: The sentiment expressed in the tweet (e.g., Positive, Negative, Neutral).
   - `TweetContent`: The actual text content of the tweet.
 
-### 
-
-TwitterSentimentAnalysis.java
+### TwitterSentimentAnalysis.java
 
 
 - **Description:** Main Java file for data processing using Apache Spark.
@@ -97,15 +90,9 @@ TwitterSentimentAnalysis.java
   - **Sentiment Analysis:** Calculates the percentage of each sentiment.
   - **Entity Analysis:** Identifies the top entities by tweet count.
   - **Additional Insights:** Calculates average tweet length by sentiment, top words in positive and negative tweets, sentiment distribution by entity, and sentiment distribution for top entities.
-  - **Output:** Saves the results to CSV files in the 
+  - **Output:** Saves the results to CSV files in the outputs directory.
 
-outputs
-
- directory.
-
-### 
-
-visualization.R
+### visualization.R
 
 
 - **Description:** R script for generating visualizations from the CSV files.
@@ -113,16 +100,12 @@ visualization.R
   - **Visualization:** Generates plots and word clouds from the CSV files.
   - **PDF Report:** Creates a PDF report with all the plots and tables, each on a separate page, displaying only the top 10 rows of each table with captions.
 
-### 
-
-log4j.properties
+### log4j.properties
 
 
 - **Description:** Configuration file for logging levels for Spark and Hadoop.
 
-### 
-
-pom.xml
+### pom.xml
 
 
 - **Description:** Maven configuration file for managing project dependencies.
@@ -130,11 +113,7 @@ pom.xml
 ## Output Descriptions
 
 ### Java Output
-The Java code processes the tweet data and generates the following CSV files in the 
-
-outputs
-
- directory:
+The Java code processes the tweet data and generates the following CSV files in the outputs directory:
 - **`sentiment_percentage`**: Contains the percentage of each sentiment.
 - **`top_entities`**: Contains the top entities by tweet count.
 - **`avg_tweet_length_by_sentiment`**: Contains the average tweet length by sentiment.
@@ -144,11 +123,7 @@ outputs
 - **`sentiment_for_top_entities`**: Contains the sentiment distribution for top entities.
 
 ### R Output
-The R script generates the following visualizations and saves them in the 
-
-outputs
-
- directory:
+The R script generates the following visualizations and saves them in the outputs directory:
 - **`sentiment_percentage_distribution.png`**: Pie chart of sentiment percentage distribution.
 - **`top_entities.png`**: Bar chart of the top entities by tweet count.
 - **`avg_tweet_length_by_sentiment.png`**: Bar chart of the average tweet length by sentiment.
@@ -158,10 +133,14 @@ outputs
 - **`sentiment_for_top_entities.png`**: Bar chart of the sentiment distribution for top entities.
 - **`positive_wordcloud.png`**: Word cloud of positive words.
 - **`negative_wordcloud.png`**: Word cloud of negative words.
-- **`visualization.pdf`**: PDF report containing all the plots and tables, each on a separate page, displaying only the top 10 rows of each table with captions.
+- **`RPlots.pdf`**: PDF report containing all the plots and tables, each on a separate page, displaying only the top 10 rows of each table with captions.
 
 ## Purpose
 The purpose of this project is to provide insights into public sentiment on various entities using Twitter data. This can be useful for businesses, politicians, and organizations to make informed decisions based on public opinion.
 
+## Contributing
+
+Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+
 ## License
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
