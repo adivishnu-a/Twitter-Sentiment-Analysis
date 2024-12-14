@@ -15,7 +15,7 @@ This project aims to analyze Twitter sentiment data using Apache Spark for data 
 
 ## Project Structure
 ```
-TwitterSentimentAnalysis/
+Twitter-Sentiment-Analysis/
 ├── data/
 │   ├── tweets.csv
 │   └── outputs/
@@ -52,8 +52,8 @@ TwitterSentimentAnalysis/
 
 ### Cloning the Repository
 ```sh
-git clone https://github.com/yourusername/TwitterSentimentAnalysis.git
-cd TwitterSentimentAnalysis
+git clone https://github.com/adivishnu-a/Twitter-Sentiment-Analysis.git
+cd Twitter-Sentiment-Analysis
 ```
 
 ## Running the Project
